@@ -2,16 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { Component } from "react";
 import { Tabs, Tab, Grid, withStyles } from "@material-ui/core"
-import {
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 import { withRouter } from 'react-router';
 import Count from './count';
 import Cards from './cards';
-import { get } from '../state/operations';
-import { proxyUrl, routeValues } from '../constants';
+import { getByProxy } from '../state/operations';
+import { proxyUrl, routeValues, cardsUrl } from '../constants';
 
 class Parent extends Component {
   static propsTypes = {
@@ -28,6 +24,7 @@ class Parent extends Component {
       cards: [],
     };
   };
+
   async componentDidMount() {
     const data = await this.getCards();
     let collection = [];
@@ -52,7 +49,12 @@ class Parent extends Component {
   };
 
   getCards = async () => {
-    const { data } = await get(proxyUrl);
+    const options = {
+      params: {
+        url: cardsUrl,
+      },
+    }
+    const { data } = await getByProxy(proxyUrl, options);
     return data;
   }
 

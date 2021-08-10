@@ -10,12 +10,11 @@ app.use((req, res, next) => {
 
 app.get('/cards', (req, res) => {
   request(
-    { url: 'https://mtgdraftking.com/data/M21.json' },
+    { url: req.query.url },
     (error, response, body) => {
       if (error || response.statusCode !== 200) {
         return res.status(500).json({ type: 'error', message: err.message });
       }
-
       res.json(JSON.parse(body));
     }
   )

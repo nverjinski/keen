@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import equal from 'fast-deep-equal';
 import { DataGrid } from '@material-ui/data-grid';
 
-
 class Cards extends Component {
   static propTypes = {
     cards: PropTypes.array,

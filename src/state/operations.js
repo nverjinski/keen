@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const get = async (url, options) => {
+const getByProxy = async (url, options) => {
   try {
     const response = await axios.get(url, options);
     return response;
@@ -10,5 +10,5 @@ const get = async (url, options) => {
 }
 
 export {
-  get
+  getByProxy
 };

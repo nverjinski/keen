@@ -6,7 +6,6 @@ import blue from '@material-ui/core/colors/blue'
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
 
-
 class Count extends Component {
   static propTypes = {
     count: PropTypes.number,
