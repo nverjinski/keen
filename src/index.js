@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import Parent from './pages/parent';
 import { BrowserRouter as Router } from 'react-router-dom';
 
