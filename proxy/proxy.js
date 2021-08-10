@@ -8,7 +8,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/cards', (req, res) => {
+app.get('/get', (req, res) => {
   request(
     { url: req.query.url },
     (error, response, body) => {
