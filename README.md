@@ -2,6 +2,15 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Requirements
+1. node version 15.1.0
+2. npm version 7.20.3
+
+## Instructions
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the project with `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
