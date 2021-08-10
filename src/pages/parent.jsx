@@ -8,10 +8,10 @@ import {
   Link,
 } from "react-router-dom";
 import { withRouter } from 'react-router';
-import Count from './pages/count';
-import Cards from './pages/cards';
-import { get } from './state/operations';
-import { proxyUrl, routeValues } from './constants';
+import Count from './count';
+import Cards from './cards';
+import { get } from '../state/operations';
+import { proxyUrl, routeValues } from '../constants';
 
 class Parent extends Component {
   static propsTypes = {
